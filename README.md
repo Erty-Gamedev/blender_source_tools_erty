@@ -12,3 +12,4 @@ Instead go to Edit -> Preferences -> Add-ons and hit Install... near the top-rig
 ## Changes
 
 * `Implicit motionless bone` checkbox is now unchecked by default (prevents unexpected skeletal hierarchy changes)
+* Automatically append ".bmp" to material names if extension is missing
