@@ -1114,7 +1114,11 @@ class SmdExporter(bpy.types.Operator, Logger):
 					if not mat_success:
 						bad_face_mats += 1
 					
-					self.smd_file.write(mat_name + "\n")
+					suffix = ''
+					if goldsrc and not mat_name.endswith('.bmp'):
+						suffix = '.bmp'
+
+					self.smd_file.write(mat_name + suffix + "\n")
 					
 					for loop in [data.loops[l] for l in poly.loop_indices]:
 						# Vertex locations, normal directions
